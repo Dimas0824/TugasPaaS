@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Deployment Aplikasi Web Managed</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Tugas Deployment Aplikasi Web Managed</h1>
+            <p class="subtitle">Aplikasi Django sederhana untuk demonstrasi PaaS di Railway.</p>
+
+            <div class="info-grid">
+                <div class="label">APP_NAME</div>
+                <div class="value">{{ app_name }}</div>
+
+                <div class="label">Status Aplikasi</div>
+                <div class="value status-ok">{{ status }}</div>
+
+                <div class="label">Waktu Akses</div>
+                <div class="value">{{ access_time }}</div>
+
+                <div class="label">Environment</div>
+                <div class="value">{{ environment }}</div>
+            </div>
+
+            <p class="note">
+                Jika halaman ini tampil normal, maka aplikasi sudah berjalan dengan baik di Railway,
+                environment variable terbaca, dan endpoint dapat diverifikasi.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
