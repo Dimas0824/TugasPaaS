@@ -86,13 +86,13 @@ DJANGO_ENV=production
 Jika auto-detect Railway gagal, isi start command manual di Railway:
 
 ```bash
-python manage.py migrate && gunicorn tugas_paas.wsgi
+python manage.py migrate && python manage.py collectstatic --noinput && gunicorn tugas_paas.wsgi
 ```
 
 ## 5) Start Command Railway (Rekomendasi)
 
 ```bash
-python manage.py migrate && gunicorn tugas_paas.wsgi
+python manage.py migrate && python manage.py collectstatic --noinput && gunicorn tugas_paas.wsgi
 ```
 
 ## 6) Menambahkan APP_NAME di Railway
